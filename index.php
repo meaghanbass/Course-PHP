@@ -12,8 +12,29 @@
     </form>
 
     <?php
-        $luckyNumbers = array(4,8,14,16,23,42);
+        // class
+        class Book{
+            var $title;
+            var $author;
+            var $pages;
+        }
 
+        // object
+        $book1 = new Book;
+        $book1->title = "Harry Potter";
+        $book1->author = "JK Rowling";
+        $book1->pages = 400;
+
+        $book2 = new Book;
+        $book2->title = "Lord of the Rings";
+        $book2->author = "Tolkein";
+        $book2->pages = 700;
+
+        echo $book2->title;
+        echo $book2->author;
+    ?>
+
+    <?php
         // the "inefficient" way of dong this:
         /*
         $index = 1;
@@ -31,9 +52,12 @@
         */
 
         // looping through an array
+        /*
+        $luckyNumbers = array(4,8,14,16,23,42);
         for($i = 0; $i < count($luckyNumbers); $i++){
             echo "$luckyNumbers[$i] <br>";
         }
+        */
     ?>
 
     <?php
