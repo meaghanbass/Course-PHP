@@ -12,6 +12,33 @@
     </form>
 
     <?php
+        class Student {
+            var $name;
+            var $major;
+            var $gpa;
+
+            function __construct($name, $major, $gpa){
+                $this->name = $name;
+                $this->major = $major;
+                $this->gpa = $gpa;
+            }
+
+            function hasHonors(){
+                if($this->gpa >= 3.5){
+                    return "<h2>Honor Roll</h2>";
+                } 
+                return "<h2>Not on the Honor Roll</h2>";
+            }
+        }
+
+        $student1 = new Student("Jim", "Business", 2.8);
+        $student2 = new Student("Pam", "Art", 3.6);
+
+        echo $student2->hasHonors();
+    ?>
+
+    <?php
+        /*
         // class
         class Book{
             var $title;
@@ -29,6 +56,7 @@
         $book2 = new Book("Lord of the Rings", "Tolkein", 700);
 
         echo $book2->author;
+        */
 
         /*
         // object
